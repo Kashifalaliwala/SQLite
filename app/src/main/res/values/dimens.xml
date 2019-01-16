@@ -1,0 +1,10 @@
+<resources>
+
+    <dimen name="five_dp">5dp</dimen>
+    <dimen name="ten_dp">10dp</dimen>
+    <dimen name="fifteen_dp">15dp</dimen>
+
+    <dimen name="five_sp">5sp</dimen>
+    <dimen name="ten_sp">10sp</dimen>
+    <dimen name="fifteen_sp">15sp</dimen>
+</resources>

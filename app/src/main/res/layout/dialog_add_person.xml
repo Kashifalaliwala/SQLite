@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/white">
+
+    <TextView
+            android:id="@+id/tvAddUpdateLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/fifteen_sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="@string/add_update_person_details"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/ten_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <android.support.constraint.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/five_dp"
+            android:background="@color/white"
+            android:layout_below="@+id/tvAddUpdateLabel">
+
+        <EditText
+                android:id="@+id/etName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/person_name"
+                android:textSize="@dimen/fifteen_sp"
+                android:textColor="@color/black"
+                android:background="@drawable/square"
+                android:padding="@dimen/five_dp"
+                android:layout_marginTop="@dimen/five_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:importantForAutofill="no"
+                tools:targetApi="o"/>
+
+        <EditText
+                android:id="@+id/etOccupation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/occupation"
+                android:textSize="@dimen/fifteen_sp"
+                android:textColor="@color/black"
+                android:background="@drawable/square"
+                android:layout_marginTop="@dimen/five_dp"
+                android:padding="@dimen/five_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etName"
+                android:importantForAutofill="no"
+                tools:targetApi="o"/>
+
+        <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="@string/phone_number"
+                android:textSize="@dimen/fifteen_sp"
+                android:textColor="@color/black"
+                android:background="@drawable/square"
+                android:layout_marginTop="@dimen/five_dp"
+                android:padding="@dimen/five_dp"
+                android:maxLength="14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etOccupation"
+                android:importantForAutofill="no"
+                tools:targetApi="o"/>
+
+        <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_address"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="@dimen/five_dp"
+                android:textSize="@dimen/fifteen_sp"
+                android:textColor="@color/black"
+                android:background="@drawable/square"
+                android:padding="@dimen/five_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etPhone"
+                android:importantForAutofill="no"
+                tools:targetApi="o"/>
+
+        <Button
+                android:id="@+id/btnInsertData"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/insert_data"
+                android:layout_marginStart="8dp"
+                android:theme="@style/CustomButtonTheme"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/etEmail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/btnCancel"/>
+
+        <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:theme="@style/CustomButtonTheme"
+                android:textColor="@color/white"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/etEmail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnInsertData"
+                app:layout_constraintHorizontal_bias="0.5"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>
